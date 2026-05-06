@@ -626,20 +626,27 @@ body {
   </div>
 </section>
 
-
-<!-- DATASET AND FEATURES -->
+<!-- DATASETS AND PREPROCESSING -->
 <section class="light-section">
   <div class="container">
 
-    <h2>Dataset and Features</h2>
+    <h2>Datasets and Preprocessing</h2>
 
+    <p class="lead">
+      This project explored liver cirrhosis stage classification using both
+      structured clinical datasets and liver ultrasound imaging data. Separate
+      preprocessing workflows were developed for the tabular machine learning
+      models and the CNN image-based classification pipeline.
+    </p>
+
+    <!-- CLINICAL DATASET -->
     <div class="card">
+
+      <h3>Clinical Records Dataset</h3>
 
       <div class="two-column">
 
         <div>
-
-          <h3>Clinical Records Dataset</h3>
 
           <p>
             The machine learning models developed in this project were trained
@@ -662,6 +669,14 @@ body {
             Kaggle Dataset, 2024.
           </p>
 
+          <div class="button-row">
+            <a class="btn btn-blue"
+               href="./static/data/liver_cirrhosis.csv"
+               target="_blank">
+              Open CSV Dataset
+            </a>
+          </div>
+
         </div>
 
         <div>
@@ -669,159 +684,87 @@ body {
           <img src="./static/images/GeneralImages_LiverDisease_Diagram.jpeg"
                alt="Liver disease diagram">
 
-         <p class="caption">
-  General diagram illustrating liver disease progression. The healthy
-  liver represents the baseline condition, while the diseased liver
-  examples conceptually correspond to cirrhosis stages 1–3 used in
-  the multiclass classification models.
-</p>
+          <p class="caption">
+            General diagram illustrating liver disease progression. The
+            healthy liver represents the baseline condition, while the
+            diseased liver examples conceptually correspond to cirrhosis
+            stages 1–3 used in the multiclass classification models.
+          </p>
 
         </div>
 
       </div>
 
-      <h3>Preprocessing</h3>
+      <h4>Clinical Data Preprocessing</h4>
 
       <p>
         Prior to model training, the dataset was preprocessed in MATLAB
         to improve data quality and ensure compatibility with machine
-        learning algorithms. The preprocessing pipeline described below was consistently applied
-        across all tabular machine learning models used in this project,
-        including the Decision Tree, Random Forest, and MLP neural network
-        models. The CNN imaging pipeline used separate image-specific
-        preprocessing procedures.
-
+        learning algorithms. The preprocessing pipeline described below
+        was consistently applied across all tabular machine learning
+        models used in this project, including the Decision Tree,
+        Random Forest, and MLP neural network models.
       </p>
 
-     <ul>
+      <ul>
 
-  <li>
-    Removed rows containing missing target classification labels
-  </li>
+        <li>
+          Removed rows containing missing target classification labels
+        </li>
 
-  <li>
-    Retained only cirrhosis stages 1–3 for classification
-  </li>
+        <li>
+          Retained only cirrhosis stages 1–3 for classification
+        </li>
 
-  <li>
-    Removed non-predictive variables including
-    Stage, ID, N_Days, Drug, and Status
-  </li>
+        <li>
+          Removed non-predictive variables including
+          Stage, ID, N_Days, Drug, and Status
+        </li>
 
-  <li>
-    Converted categorical variables into numerical
-    format using one-hot encoding
-  </li>
+        <li>
+          Converted categorical variables into numerical
+          format using one-hot encoding
+        </li>
 
-  <li>
-    Handled missing numerical values through
-    interpolation and mean-value replacement
-  </li>
+        <li>
+          Handled missing numerical values through
+          interpolation and mean-value replacement
+        </li>
 
-  <li>
-    Assigned missing categorical values to a
-    separate category before encoding
-  </li>
+        <li>
+          Assigned missing categorical values to a
+          separate category before encoding
+        </li>
 
-  <li>
-    Partitioned the dataset into 70% training,
-    15% validation, and 15% testing subsets
-  </li>
+        <li>
+          Partitioned the dataset into 70% training,
+          15% validation, and 15% testing subsets
+        </li>
 
-  <li>
-    Applied z-score normalization using training
-    set statistics to prevent data leakage
-  </li>
+        <li>
+          Applied z-score normalization using training
+          set statistics to prevent data leakage
+        </li>
 
-</ul>
+      </ul>
 
-    </div>
-
-  </div>
-</section>
-
- 
-
-
-
-  <!-- DATA -->
-  <section class="light-section">
-    <div class="container">
-
-      <h2>Datasets and Preprocessing</h2>
-
-      <div class="grid-2">
-
-        <div class="card">
-          <h3>Clinical Dataset</h3>
-
-          <p>
-            The tabular dataset was derived from Mayo Clinic patient records and contains demographic information,
-            laboratory measurements, and physician-observed clinical indicators related to liver cirrhosis progression.
-          </p>
-
-          <div class="button-row">
-            <a class="btn btn-blue"
-              href="./static/data/liver_cirrhosis.csv"
-              target="_blank">
-              Open CSV Dataset
-            </a>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Ultrasound Image Dataset</h3>
-
-          <p>
-            The CNN workflow used a liver fibrosis ultrasound dataset containing approximately 6323 grayscale ultrasound images
-            grouped into fibrosis stages f0–f4.
-          </p>
-
-          <div class="button-row">
-            <a class="btn btn-cyan"
-              href="https://www.kaggle.com/datasets/vibhingupta028/liver-histopathology-fibrosis-ultrasound-images"
-              target="_blank">
-              View Kaggle Dataset
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="card" style="margin-top:1.5rem;">
-
-        <h3>Preprocessing Pipeline</h3>
-
-        <ul>
-          <li>Removed rows with missing target labels.</li>
-          <li>Restricted classification targets to cirrhosis stages 1–3.</li>
-          <li>Removed non-predictive variables such as ID, N_Days, Drug, and Status.</li>
-          <li>Applied categorical encoding to variables such as sex, ascites, edema, hepatomegaly, and spiders.</li>
-          <li>Performed missing value interpolation and mean replacement for numerical features.</li>
-          <li>Assigned missing categorical values to a separate missing category.</li>
-          <li>Applied z-score normalization using training-set statistics.</li>
-          <li>Split the dataset using a 70% training, 15% validation, and 15% testing partition.</li>
-        </ul>
-
-      </div>
+      <p>
+        Many variables within the structured dataset, including ascites,
+        hepatomegaly, edema, and spiders, are often derived from physician
+        interpretation of imaging studies or physical examination findings
+        before being entered numerically into patient records.
+      </p>
 
     </div>
-  </section>
 
-
- <!-- CNN DATASET AND PREPROCESSING -->
-<section class="white-section">
-  <div class="container">
-
-    <h2>Ultrasound Imaging Dataset and CNN Preprocessing</h2>
-
+    <!-- ULTRASOUND DATASET -->
     <div class="card">
+
+      <h3>Ultrasound Imaging Dataset</h3>
 
       <div class="two-column">
 
         <div>
-
-          <h3>Ultrasound Imaging Dataset</h3>
 
           <p>
             In addition to the structured clinical dataset, an image-based
@@ -841,34 +784,38 @@ body {
             Hospital and used for CNN training and validation purposes.
           </p>
 
+          <div class="button-row">
+            <a class="btn btn-cyan"
+               href="https://www.kaggle.com/datasets/vibhingupta028/liver-histopathology-fibrosis-ultrasound-images"
+               target="_blank">
+              View Ultrasound Dataset
+            </a>
+          </div>
+
         </div>
 
         <div>
 
           <img src="./static/images/CNN_Adjacent_LiverImaging_Examples.png"
-     alt="Adjacent liver ultrasound image examples">
+               alt="Adjacent liver ultrasound image examples">
 
-          <p class="caption">
-            Example adjacent ultrasound images used in the CNN-based
-            liver fibrosis classification workflow.
-          </p>
+         <p class="caption">
+  Ultrasound images directly from the liver fibrosis dataset
+  used for CNN classification.
+</p>
 
         </div>
 
       </div>
 
-      <h3>CNN Image Preprocessing</h3>
+      <h4>CNN Image Preprocessing</h4>
 
       <p>
         Prior to CNN training, the ultrasound images were preprocessed
         in MATLAB to create a standardized dataset suitable for
-        convolutional neural network classification.
-      </p>
-
-      <p>
-        The preprocessing pipeline described below was consistently
-        applied across the CNN image dataset prior to architecture
-        development and model training.
+        convolutional neural network classification. The CNN imaging
+        pipeline used separate image-specific preprocessing procedures
+        prior to architecture development and model training.
       </p>
 
       <ul>
@@ -916,19 +863,6 @@ body {
         categories. The resulting standardized dataset was then used
         for CNN architecture development and training.
       </p>
-
-    </div>
-
-  </div>
-</section>
-
-      <div class="button-row">
-        <a class="btn btn-cyan"
-           href="https://www.kaggle.com/datasets/vibhingupta028/liver-histopathology-fibrosis-ultrasound-images"
-           target="_blank">
-          View Ultrasound Dataset
-        </a>
-      </div>
 
     </div>
 
