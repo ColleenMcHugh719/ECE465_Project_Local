@@ -540,40 +540,47 @@
 
       </p>
 
-      <ul>
+     <ul>
 
-        <li>Removed rows containing missing target classification labels</li>
+  <li>
+    Removed rows containing missing target classification labels
+  </li>
 
-        <li>Retained only cirrhosis stages 1–3 for classification</li>
+  <li>
+    Retained only cirrhosis stages 1–3 for classification
+  </li>
 
-        <li>Removed non-predictive administrative variables</li>
+  <li>
+    Removed non-predictive variables including
+    Stage, ID, N_Days, Drug, and Status
+  </li>
 
-        <li>
-          Converted categorical variables into numerical format
-          using one-hot encoding
-        </li>
+  <li>
+    Converted categorical variables into numerical
+    format using one-hot encoding
+  </li>
 
-        <li>
-          Handled missing numerical values through interpolation
-          and mean-value replacement
-        </li>
+  <li>
+    Handled missing numerical values through
+    interpolation and mean-value replacement
+  </li>
 
-        <li>
-          Assigned missing categorical values to a separate
-          category before encoding
-        </li>
+  <li>
+    Assigned missing categorical values to a
+    separate category before encoding
+  </li>
 
-        <li>
-          Partitioned the dataset into 70% training,
-          15% validation, and 15% testing subsets
-        </li>
+  <li>
+    Partitioned the dataset into 70% training,
+    15% validation, and 15% testing subsets
+  </li>
 
-        <li>
-          Applied z-score normalization using training set
-          statistics to prevent data leakage
-        </li>
+  <li>
+    Applied z-score normalization using training
+    set statistics to prevent data leakage
+  </li>
 
-      </ul>
+</ul>
 
     </div>
 
