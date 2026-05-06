@@ -708,6 +708,87 @@
   </section>
 
 
+  <!-- CNN DATASET AND PREPROCESSING -->
+<section class="white-section">
+  <div class="container">
+
+    <h2>Ultrasound Imaging Dataset and CNN Preprocessing</h2>
+
+    <div class="card">
+
+      <div class="two-column">
+
+        <div>
+          <h3>Ultrasound Imaging Dataset</h3>
+
+          <p>
+            In addition to the structured clinical dataset, an image-based
+            dataset was explored for liver fibrosis stage classification
+            using ultrasound imaging data. The dataset consisted of
+            approximately 6,323 grayscale ultrasound images organized into
+            five classification categories, f0 through f4, representing
+            increasing stages of liver fibrosis progression from no fibrosis
+            to severe fibrosis.
+          </p>
+
+          <p>
+            The dataset was derived from the work of Y. Joo et al.,
+            titled “Classification of Liver Fibrosis From Heterogeneous
+            Ultrasound Image,” published in <i>IEEE Access</i> in 2023.
+            The ultrasound images were collected from Seoul St. Mary’s
+            Hospital and used for CNN training and validation purposes.
+          </p>
+        </div>
+
+        <div>
+          <img src="./static/images/CNN_Adjacent.png"
+               alt="Adjacent liver ultrasound image examples">
+
+          <p class="caption">
+            Example adjacent ultrasound images used in the CNN-based liver
+            fibrosis classification workflow.
+          </p>
+        </div>
+
+      </div>
+
+      <h3>CNN Image Preprocessing</h3>
+
+      <p>
+        Prior to CNN training, the ultrasound images were preprocessed in
+        MATLAB to create a standardized dataset suitable for convolutional
+        neural network classification.
+      </p>
+
+      <ul>
+        <li>Obtained the dimensions of the first image to define a target image size</li>
+        <li>Resized all images to 480×640 resolution</li>
+        <li>Preserved original images by saving resized images into a separate dataset directory</li>
+        <li>Maintained image aspect ratios during resizing</li>
+        <li>Applied center padding with zeros to preserve target dimensions</li>
+        <li>Iterated through each fibrosis stage subfolder, f0 through f4, during processing</li>
+        <li>Created balanced training subsets by selecting the first 400 images from each fibrosis stage category</li>
+        <li>Organized resized images into stage-specific class folders for CNN training</li>
+      </ul>
+
+      <p>
+        The balanced dataset approach was used to reduce training bias caused
+        by unequal numbers of images between fibrosis stage categories.
+      </p>
+
+      <div class="button-row">
+        <a class="btn btn-cyan"
+           href="https://www.kaggle.com/datasets/vibhingupta028/liver-histopathology-fibrosis-ultrasound-images"
+           target="_blank">
+          View Ultrasound Dataset
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 <!-- MACHINE LEARNING METHODS -->
 <section class="white-section">
   <div class="container">
