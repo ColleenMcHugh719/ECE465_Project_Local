@@ -1104,39 +1104,40 @@
 
   <!-- DECISION TREE -->
   <section class="white-section">
-   <div class="two-column">
+   <!-- Decision Tree -->
+<section class="light-section">
+  <div class="container">
 
-  <div>
-    <h3>Decision Tree Results</h3>
+    <h2>Decision Tree Results</h2>
 
     <p>
       The Decision Tree model achieved classification accuracies ranging from approximately 70–74% when predicting liver cirrhosis stage. Analysis of the confusion matrix showed that Stage 2 was the most difficult classification category because many clinical indicators overlap with neighboring disease stages. In contrast, the model demonstrated stronger performance when identifying Stage 1 and Stage 3 cases, where clinical distinctions were more pronounced. Overall, the Decision Tree provided a simple and interpretable baseline for comparison against the more advanced ensemble and neural network models explored later in the project.
     </p>
-  </div>
 
-  <div>
-    <img src="./static/images/DT_decision_confusion.png"
-         alt="Decision Tree confusion matrix">
-  </div>
+    <div class="grid-2">
 
-</div>
+      <div class="card">
+        <h3>Decision Tree Confusion Matrix</h3>
 
-<div class="two-column">
+        <img src="./static/images/DT_decision_confusion.png"
+          alt="Decision Tree confusion matrix">
+      </div>
 
-  <div>
-    <h3>Decision Tree Feature Importance</h3>
+      <div class="card">
+        <h3>Decision Tree Feature Importance</h3>
+
+        <img src="./static/images/DT_decision_importance.png"
+          alt="Decision Tree feature importance plot">
+      </div>
+
+    </div>
 
     <p>
       Feature importance analysis showed that several laboratory-based clinical variables contributed strongly to cirrhosis stage classification. The importance distribution demonstrated how Decision Trees can provide interpretable insight into which clinical measurements most strongly influenced classification decisions.
     </p>
-  </div>
 
-  <div>
-    <img src="./static/images/DT_decision_importance.png"
-         alt="Decision Tree feature importance plot">
   </div>
-
-</div>
+</section>
   </section>
 
   <!-- RANDOM FOREST -->
