@@ -476,6 +476,111 @@
 
   </div>
 </section>
+
+
+<!-- DATASET AND FEATURES -->
+<section class="light-section">
+  <div class="container">
+
+    <h2>Dataset and Features</h2>
+
+    <div class="card">
+
+      <div class="two-column">
+
+        <div>
+
+          <h3>Clinical Records Dataset</h3>
+
+          <p>
+            The machine learning models developed in this project were trained
+            using a publicly available liver cirrhosis dataset derived from
+            Mayo Clinic patient records. The dataset was obtained from the
+            Kaggle repository <i>Liver Cirrhosis Stage Classification</i>
+            and contained structured demographic information, laboratory
+            measurements, and physician-observed clinical indicators
+            associated with liver disease progression.
+          </p>
+
+          <p>
+            Cirrhosis stages 1–3 were used as the multiclass classification
+            targets for supervised machine learning.
+          </p>
+
+          <p>
+            <strong>Dataset Source:</strong><br>
+            Aadarshvelu, <i>Liver Cirrhosis Stage Classification</i>,
+            Kaggle Dataset, 2024.
+          </p>
+
+        </div>
+
+        <div>
+
+          <img src="./static/images/GeneralImages_LiverDisease_Diagram.jpeg"
+               alt="Liver disease diagram">
+
+          <p class="caption">
+            General diagram illustrating progression and severity of liver disease.
+          </p>
+
+        </div>
+
+      </div>
+
+      <h3>Preprocessing</h3>
+
+      <p>
+        Prior to model training, the dataset was preprocessed in MATLAB
+        to improve data quality and ensure compatibility with machine
+        learning algorithms.
+      </p>
+
+      <ul>
+
+        <li>Removed rows containing missing target classification labels</li>
+
+        <li>Retained only cirrhosis stages 1–3 for classification</li>
+
+        <li>Removed non-predictive administrative variables</li>
+
+        <li>
+          Converted categorical variables into numerical format
+          using one-hot encoding
+        </li>
+
+        <li>
+          Handled missing numerical values through interpolation
+          and mean-value replacement
+        </li>
+
+        <li>
+          Assigned missing categorical values to a separate
+          category before encoding
+        </li>
+
+        <li>
+          Partitioned the dataset into 70% training,
+          15% validation, and 15% testing subsets
+        </li>
+
+        <li>
+          Applied z-score normalization using training set
+          statistics to prevent data leakage
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+  
   
   
    <!-- SUMMARY -->
