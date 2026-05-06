@@ -1140,98 +1140,64 @@
 </section>
   </section>
 
-  <!-- RANDOM FOREST -->
-  <section class="light-section">
-    <div class="container">
+ <!-- Random Forest Results -->
+<section class="light-section">
+  <div class="container">
 
-      <h2>Random Forest Results</h2>
+    <h2>Random Forest Results</h2>
 
-      <p>
-        The built-in Random Forest achieved 88.77% testing accuracy while the from-scratch implementation achieved 81.81%.
-        Feature removal experiments demonstrated that laboratory measurements were the most important predictors.
-      </p>
+    <p>
+      The Random Forest model demonstrated strong overall performance for liver cirrhosis stage classification. The built-in MATLAB Random Forest achieved a highest testing accuracy of 88.77%, while the from-scratch implementation achieved 81.81%. The lower performance of the from-scratch version was expected because the custom implementation was primarily developed to better understand the internal behavior of ensemble learning algorithms rather than maximize optimization efficiency.
+    </p>
 
-      <div class="grid-2">
+    <div class="grid-2">
 
-        <div class="card">
-          <h3>Baseline Random Forest</h3>
+      <div class="card">
+        <h3>Baseline Random Forest Confusion Matrix</h3>
 
-          <img src="./static/images/RF_baseline_confusion.png"
-            alt="Baseline Random Forest">
-        </div>
+        <img src="./static/images/RF_baseline_confusion.png"
+          alt="Random Forest confusion matrix">
+      </div>
 
-        <div class="card">
-          <h3>Scratch Random Forest</h3>
+      <div class="card">
+        <h3>Random Forest Feature Importance</h3>
 
-          <img src="./static/images/RF_baseline_confusion_scratch.png"
-            alt="Scratch Random Forest">
-        </div>
-
-        <div class="card">
-          <h3>Without Lab Features</h3>
-
-          <img src="./static/images/RF_no_lab_features.png"
-            alt="Without lab features">
-        </div>
-
-        <div class="card">
-          <h3>Without Symptom Features</h3>
-
-          <img src="./static/images/RF_no_symptom_features.png"
-            alt="Without symptom features">
-        </div>
-
+        <img src="./static/images/RF_feature_importance_baseline.png"
+          alt="Random Forest feature importance plot">
       </div>
 
     </div>
-  </section>
 
-  <!-- FEATURE ENGINEERING -->
-  <section class="white-section">
-    <div class="container">
+    <p>
+      The baseline confusion matrix showed strong classification performance across all three cirrhosis stages, with most predictions concentrated along the diagonal. Misclassifications occurred primarily between neighboring stages, particularly between Stages 1 and 2 and between Stages 2 and 3. This behavior is reasonable because many clinical indicators overlap between adjacent stages of liver disease progression.
+    </p>
 
-      <h2>Feature Engineering and Importance</h2>
+    <p>
+      Feature removal experiments demonstrated that laboratory measurements were the most important predictors within the dataset. When laboratory-based features were removed, testing accuracy decreased significantly from 88.77% to 66.19%. In contrast, removing symptom-related features only reduced accuracy to 85.76%, suggesting that laboratory biomarkers carried substantially more predictive information than symptom indicators alone.
+    </p>
 
-      <p>
-        Feature engineering introduced clinically meaningful relationships such as coagulation risk,
-        bilirubin–albumin ratio, Child-Pugh inspired features, and logarithmic transformations of bilirubin and SGOT.
-      </p>
+    <p>
+      Feature importance analysis further supported these findings. Variables such as prothrombin, platelets, albumin, bilirubin, and age were identified as some of the most influential predictors. These features are clinically meaningful because they are closely associated with liver function, coagulation behavior, and disease severity.
+    </p>
 
-      <div class="grid-2">
+    <div class="card">
+      <h3>Random Forest Model Comparison</h3>
 
-        <div class="card">
-          <h3>Baseline Feature Importance</h3>
-
-          <img src="./static/images/RF_feature_importance_baseline.png"
-            alt="Baseline feature importance">
-        </div>
-
-        <div class="card">
-          <h3>Engineered Feature Importance</h3>
-
-          <img src="./static/images/RF_feature_importance_engineered.png"
-            alt="Engineered feature importance">
-        </div>
-
-        <div class="card">
-          <h3>Engineered Features Model</h3>
-
-          <img src="./static/images/RF_engineered_features.png"
-            alt="Engineered features">
-        </div>
-
-        <div class="card">
-          <h3>Final Random Forest Comparison</h3>
-
-          <img src="./static/images/RF_final_comparison.png"
-            alt="Final comparison">
-        </div>
-
-      </div>
-
+      <img src="./static/images/RF_final_comparison.png"
+        alt="Random Forest comparison results">
     </div>
-  </section>
 
+    <p>
+      Additional engineered features were also explored to improve interpretability while preserving classification performance. Features such as coagulation risk metrics, bilirubin-albumin ratios, Child-Pugh-inspired indicators, and logarithmic transformations of laboratory measurements were introduced into the model. The engineered-feature Random Forest achieved 88.35% testing accuracy, remaining very close to the baseline model while providing more interpretable clinical relationships.
+    </p>
+
+    <p>
+      Overall, the Random Forest experiments demonstrated three major findings. First, Random Forest models were highly effective for multiclass liver cirrhosis classification. Second, laboratory measurements represented the most important feature group within the dataset. Third, feature engineering improved interpretability while maintaining strong overall model performance.
+    </p>
+
+  </div>
+</section>
+  
  <!-- MLP -->
 <section class="light-section">
   <div class="container">
