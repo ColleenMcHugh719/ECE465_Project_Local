@@ -201,6 +201,35 @@
     grid-template-columns: 1fr;
   }
 }
+
+.scope-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.scope-layout img {
+  width: 100%;
+  height: auto;
+  max-height: 820px;
+  object-fit: contain;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  background: white;
+}
+
+.scope-layout .caption {
+  max-width: 700px;
+  margin: 1rem auto 0;
+}
+
+@media (max-width: 900px) {
+  .scope-layout {
+    grid-template-columns: 1fr;
+  }
+}
+    
    .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
