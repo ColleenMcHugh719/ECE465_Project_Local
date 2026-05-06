@@ -701,7 +701,7 @@
   </section>
 
 
-  <!-- CNN DATASET AND PREPROCESSING -->
+ <!-- CNN DATASET AND PREPROCESSING -->
 <section class="white-section">
   <div class="container">
 
@@ -712,6 +712,7 @@
       <div class="two-column">
 
         <div>
+
           <h3>Ultrasound Imaging Dataset</h3>
 
           <p>
@@ -726,21 +727,24 @@
 
           <p>
             The dataset was derived from the work of Y. Joo et al.,
-            titled “Classification of Liver Fibrosis From Heterogeneous
-            Ultrasound Image,” published in <i>IEEE Access</i> in 2023.
+            titled <i>“Classification of Liver Fibrosis From Heterogeneous
+            Ultrasound Image”</i>, published in <i>IEEE Access</i> in 2023.
             The ultrasound images were collected from Seoul St. Mary’s
             Hospital and used for CNN training and validation purposes.
           </p>
+
         </div>
 
         <div>
+
           <img src="./static/images/CNN_Adjacent.png"
                alt="Adjacent liver ultrasound image examples">
 
           <p class="caption">
-            Example adjacent ultrasound images used in the CNN-based liver
-            fibrosis classification workflow.
+            Example adjacent ultrasound images used in the CNN-based
+            liver fibrosis classification workflow.
           </p>
+
         </div>
 
       </div>
@@ -748,26 +752,67 @@
       <h3>CNN Image Preprocessing</h3>
 
       <p>
-        Prior to CNN training, the ultrasound images were preprocessed in
-        MATLAB to create a standardized dataset suitable for convolutional
-        neural network classification.
+        Prior to CNN training, the ultrasound images were preprocessed
+        in MATLAB to create a standardized dataset suitable for
+        convolutional neural network classification.
+      </p>
+
+      <p>
+        The preprocessing pipeline described below was consistently
+        applied across the CNN image dataset prior to architecture
+        development and model training.
       </p>
 
       <ul>
-        <li>Obtained the dimensions of the first image to define a target image size</li>
-        <li>Resized all images to 480×640 resolution</li>
-        <li>Preserved original images by saving resized images into a separate dataset directory</li>
-        <li>Maintained image aspect ratios during resizing</li>
-        <li>Applied center padding with zeros to preserve target dimensions</li>
-        <li>Iterated through each fibrosis stage subfolder, f0 through f4, during processing</li>
-        <li>Created balanced training subsets by selecting the first 400 images from each fibrosis stage category</li>
-        <li>Organized resized images into stage-specific class folders for CNN training</li>
+
+        <li>
+          Obtained the dimensions of the first image to define a target image size
+        </li>
+
+        <li>
+          Resized all grayscale ultrasound images to 480 × 640 × 1
+        </li>
+
+        <li>
+          Preserved original images by saving resized copies into a separate dataset directory
+        </li>
+
+        <li>
+          Maintained image aspect ratios during resizing
+        </li>
+
+        <li>
+          Applied center zero-padding to preserve target dimensions
+        </li>
+
+        <li>
+          Iterated through fibrosis stage subfolders, f0 through f4,
+          during processing
+        </li>
+
+        <li>
+          Created balanced training subsets using 400 images from
+          each fibrosis stage category
+        </li>
+
+        <li>
+          Organized resized images into stage-specific class folders
+          for CNN training
+        </li>
+
       </ul>
 
       <p>
-        The balanced dataset approach was used to reduce training bias caused
-        by unequal numbers of images between fibrosis stage categories.
+        The balanced dataset approach was used to reduce training bias
+        caused by unequal numbers of images between fibrosis stage
+        categories. The resulting standardized dataset was then used
+        for CNN architecture development and training.
       </p>
+
+    </div>
+
+  </div>
+</section>
 
       <div class="button-row">
         <a class="btn btn-cyan"
