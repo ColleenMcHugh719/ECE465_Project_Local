@@ -300,15 +300,29 @@ p {
       margin-bottom: 0.5rem;
     }
 
- footer {
-  display: block;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}
+
+    
+footer {
   background: #111827;
   color: #d1d5db;
   padding: 3.5rem 2rem;
   text-align: center;
+  width: 100%;
+  margin-top: auto;
 }
 
 footer p {
