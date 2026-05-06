@@ -920,26 +920,59 @@
     </div>
   </section>
 
-  <!-- CONCLUSION -->
-  <section class="white-section">
-    <div class="container">
+ <!-- CONCLUSION -->
+<section class="light-section">
+  <div class="container">
 
-      <h2>Conclusion and Future Work</h2>
+    <h2>Conclusion and Future Work</h2>
+
+    <div class="card">
 
       <p>
-        This project demonstrated that machine learning can effectively classify liver disease severity using both structured
-        clinical datasets and ultrasound imaging data. Random Forest achieved the strongest tabular classification performance,
-        while the MLP neural network produced comparable nonlinear classification results.
+        This project explored multiple machine learning approaches for liver
+        cirrhosis stage classification using both structured clinical datasets
+        and medical imaging data. Decision Tree, Random Forest, Multilayer
+        Perceptron (MLP), and preliminary CNN-based approaches were evaluated
+        using publicly available liver cirrhosis datasets in MATLAB.
       </p>
 
       <p>
-        Future work could include larger datasets, transfer learning for CNN models, image augmentation, adaptive optimizers,
-        regularization techniques, and a unified multimodal system capable of simultaneously evaluating structured clinical
-        records and medical imaging information.
+        Among the tabular models, Random Forest achieved the highest overall
+        performance with accuracies approaching 89%, while the custom MLP
+        neural network achieved comparable performance near 88%. Feature
+        analysis showed that biomarkers such as bilirubin, albumin,
+        platelets, and prothrombin were among the most important predictors
+        of cirrhosis severity.
+      </p>
+
+      <div class="image-container">
+        <img src="./static/images/OverallResults_465_Final_Results.png"
+             alt="Overall results comparison">
+
+        <p class="caption">
+          Overall comparison of machine learning model performance across the project.
+        </p>
+      </div>
+
+      <p>
+        The project also explored CNN-based image classification using liver
+        ultrasound data. Although the imaging pipeline remains under development,
+        the results demonstrated the broader potential of combining structured
+        clinical records with medical imaging analysis for liver disease assessment.
+      </p>
+
+      <p>
+        Future work may include larger and more diverse datasets, improved
+        neural network optimization techniques, deeper CNN architectures,
+        transfer learning, and multimodal systems capable of simultaneously
+        analyzing clinical records and medical imaging data for more
+        comprehensive liver cirrhosis staging.
       </p>
 
     </div>
-  </section>
+
+  </div>
+</section>
 
   <!-- CONTRIBUTIONS -->
 <section class="light-section">
