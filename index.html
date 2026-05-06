@@ -144,6 +144,30 @@
       max-width: 980px;
     }
 
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.two-column img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+}
+
+@media (max-width: 900px) {
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+}
+
+    
     .grid-2 {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
