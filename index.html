@@ -990,7 +990,7 @@
     </div>
   </section>
 
- <!-- CONCLUSION -->
+<!-- CONCLUSION -->
 <section class="light-section">
   <div class="container">
 
@@ -1006,37 +1006,46 @@
         using publicly available liver cirrhosis datasets in MATLAB.
       </p>
 
-      <p>
-        Among the tabular models, Random Forest achieved the highest overall
-        performance with accuracies approaching 89%, while the custom MLP
-        neural network achieved comparable performance near 88%. Feature
-        analysis showed that biomarkers such as bilirubin, albumin,
-        platelets, and prothrombin were among the most important predictors
-        of cirrhosis severity.
-      </p>
+      <div class="two-column">
 
-      <div class="image-container">
-        <img src="./static/images/OverallResults_465_Final_Results.png"
-             alt="Overall results comparison">
+        <div>
+          <img src="./static/images/OverallResults_465_Final_Results.png"
+               alt="Overall results comparison"
+               style="width:100%; border-radius:16px;">
+        </div>
 
-        <p class="caption">
-          Overall comparison of machine learning model performance across the project.
-        </p>
+        <div>
+
+          <p>
+            Among the tabular models, Random Forest achieved the highest
+            overall performance with accuracies approaching 89%, while the
+            custom MLP neural network achieved comparable performance near
+            88%.
+          </p>
+
+          <p>
+            Feature analysis showed that biomarkers such as bilirubin,
+            albumin, platelets, and prothrombin were among the most important
+            predictors of cirrhosis severity.
+          </p>
+
+          <p>
+            The CNN-based image classification pipeline achieved promising
+            preliminary results and demonstrated the broader potential of
+            combining structured clinical records with medical imaging
+            analysis for liver disease assessment.
+          </p>
+
+        </div>
+
       </div>
 
       <p>
-        The project also explored CNN-based image classification using liver
-        ultrasound data. Although the imaging pipeline remains under development,
-        the results demonstrated the broader potential of combining structured
-        clinical records with medical imaging analysis for liver disease assessment.
-      </p>
-
-      <p>
-        Future work may include larger and more diverse datasets, improved
-        neural network optimization techniques, deeper CNN architectures,
-        transfer learning, and multimodal systems capable of simultaneously
-        analyzing clinical records and medical imaging data for more
-        comprehensive liver cirrhosis staging.
+        Future work may include larger and more diverse datasets,
+        improved neural network optimization techniques, deeper CNN
+        architectures, transfer learning approaches, and multimodal
+        systems capable of simultaneously analyzing clinical records
+        and medical imaging data.
       </p>
 
     </div>
