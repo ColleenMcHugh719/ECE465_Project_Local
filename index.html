@@ -877,54 +877,57 @@
       </div>
 
       <!-- RANDOM FOREST -->
-      <div class="card">
+<div class="card">
 
-        <h3>Random Forest</h3>
+  <h3>Random Forest</h3>
 
-        <h4>Built-In MATLAB Implementation</h4>
+  <h4>Built-In MATLAB Implementation</h4>
 
-        <p>
-          The Random Forest model was implemented using MATLAB’s built-in
-          <code>fitcensemble</code> function with bootstrap aggregation
-          (bagging). Multiple decision trees were trained using randomized
-          subsets of both the training data and feature space in order to
-          improve generalization performance and reduce correlation between trees.
-        </p>
+  <p>
+    The Random Forest model was implemented using MATLAB’s
+    built-in <code>fitcensemble</code> function with bootstrap
+    aggregation (bagging). Multiple decision trees were trained
+    using randomized subsets of both the training data and
+    feature space in order to improve generalization performance
+    and reduce correlation between trees.
+  </p>
 
-        <p>
-          Predictions from individual trees were combined using majority
-          voting to produce the final classification output, while feature
-          importance analysis was used to identify the most influential
-          clinical variables associated with liver cirrhosis staging.
-        </p>
+  <p>
+    Predictions from individual trees were combined using
+    majority voting to produce the final classification output,
+    while feature importance analysis was used to identify the
+    most influential clinical variables associated with liver
+    cirrhosis staging.
+  </p>
 
-        <h4>From-Scratch Implementation</h4>
+  <h4>From-Scratch Implementation</h4>
 
-        <p>
-          A second Random Forest implementation was developed from scratch
-          in order to better understand the internal mechanics of ensemble
-          learning algorithms. The custom implementation utilized bootstrap
-          sampling, recursive decision tree construction, randomized feature
-          selection, and majority voting aggregation across independently
-          trained trees.
-        </p>
+  <p>
+    A second Random Forest model was developed from scratch in
+    order to better understand the internal mechanics of
+    ensemble learning algorithms. The custom implementation
+    utilized bootstrap sampling, recursive decision tree
+    construction, randomized feature selection, and majority
+    voting aggregation across independently trained trees.
+  </p>
 
-        <p>
-          Although computationally slower than MATLAB’s built-in implementation,
-          the from-scratch model provided greater insight into how Random Forest
-          classifiers operate internally and how ensemble learning improves
-          classification performance.
-        </p>
+  <p>
+    Although computationally slower than MATLAB’s built-in
+    implementation, the from-scratch model provided greater
+    insight into how Random Forest classifiers operate
+    internally and how ensemble learning improves
+    classification performance.
+  </p>
 
-        <img src="./static/images/GeneralImages_RandomForest_GenericModel.png"
-             alt="Random Forest model">
+  <img src="./static/images/GeneralImages_RF_GenericModel.png"
+       alt="Random Forest model">
 
-        <p class="caption">
-          Generalized Random Forest ensemble architecture utilizing
-          multiple independently trained Decision Trees.
-        </p>
+  <p class="caption">
+    Generalized Random Forest ensemble architecture utilizing
+    multiple independently trained Decision Trees.
+  </p>
 
-      </div>
+</div>
 
       <!-- MLP -->
       <div class="card">
