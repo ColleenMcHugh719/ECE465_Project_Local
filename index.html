@@ -1232,16 +1232,14 @@
     </div>
   </section>
 
-  <!-- MLP -->
-  <section class="light-section">
-   <!-- MLP -->
+ <!-- MLP -->
 <section class="light-section">
   <div class="container">
 
     <h2>MLP Neural Network Results</h2>
 
     <p>
-      The custom multilayer perceptron (MLP) neural network achieved approximately 87.33% validation accuracy and 87.76% testing accuracy when classifying liver cirrhosis stages 1–3. The training loss curve demonstrated stable convergence throughout the 35,000 training epochs, while confusion matrix analysis showed strong overall classification performance across all three disease stages.
+      The custom multilayer perceptron (MLP) neural network achieved a validation accuracy of approximately 87.33% and a testing accuracy of 87.76% when classifying liver cirrhosis stages 1–3. The relatively small difference between validation and testing performance suggests that the network generalized reasonably well to unseen data without severe overfitting.
     </p>
 
     <div class="grid-2">
@@ -1257,14 +1255,21 @@
         <h3>MLP Training Loss</h3>
 
         <img src="./static/images/MLP_TrainingLoss_Graph.png"
-          alt="MLP training loss">
+          alt="MLP training loss graph">
       </div>
 
     </div>
 
+    <p>
+      The training loss curve demonstrated stable convergence throughout the training process, with loss steadily decreasing across the 35,000 training epochs. Confusion matrix analysis also showed strong overall classification performance, with most predictions concentrated along the diagonal of the matrix. Similar to the other models explored in this project, the majority of misclassifications occurred between neighboring disease stages due to overlapping clinical indicators between adjacent stages of cirrhosis progression.
+    </p>
+
+    <p>
+      Although the MLP achieved strong classification performance, the improvement relative to the Random Forest model remained modest. This suggests that limitations in dataset size, feature separability, and overlap between clinical stages may have constrained the maximum achievable classification accuracy more than the specific model architecture itself.
+    </p>
+
   </div>
 </section>
-  </section>
 
   <!-- CNN -->
   <section class="white-section">
