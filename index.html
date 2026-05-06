@@ -707,67 +707,183 @@
     </div>
   </section>
 
-  <!-- MODELS -->
-  <section class="white-section">
-    <div class="container">
 
-      <h2>Machine Learning Methods</h2>
+<!-- MACHINE LEARNING METHODS -->
+<section class="white-section">
+  <div class="container">
 
-      <div class="grid-2">
+    <h2>Machine Learning Methods</h2>
 
-        <div class="card">
-          <h3>Decision Tree</h3>
+    <p class="lead">
+      Multiple machine learning approaches were explored throughout this
+      project in order to compare model interpretability, ensemble learning
+      performance, nonlinear classification capability, and image-based
+      medical analysis for liver cirrhosis staging.
+    </p>
 
-          <p>
-            The Decision Tree model served as the baseline approach because it is highly interpretable and easy to understand.
-            Tree depth was limited to reduce overfitting while maintaining interpretability.
-          </p>
+    <div class="grid-2">
 
-          <img src="./static/images/GeneralImages_DecisonTree_GenericModel.png"
-            alt="Decision Tree model">
-        </div>
+      <!-- DECISION TREE -->
+      <div class="card">
 
-        <div class="card">
-          <h3>Random Forest</h3>
+        <h3>Decision Tree</h3>
 
-          <p>
-            Random Forest improved performance through bagging and ensemble learning. Both MATLAB’s built-in implementation
-            and a custom from-scratch implementation were explored.
-          </p>
+        <p>
+          The Decision Tree model was selected as the baseline classifier
+          because it was the simplest and most interpretable machine
+          learning approach explored in this project. Tree depth was
+          limited during training to reduce overfitting while maintaining
+          interpretability of the classification process.
+        </p>
 
-          <img src="./static/images/GeneralImages_RandomForest_GenericModel.png"
-            alt="Random Forest model">
-        </div>
+        <p>
+          The model provided a transparent framework for evaluating how
+          individual clinical features contributed to liver cirrhosis
+          stage classification and served as a comparison point for the
+          more advanced ensemble and neural network models explored later
+          in the project.
+        </p>
 
-        <div class="card">
-          <h3>MLP Neural Network</h3>
+        <img src="./static/images/GeneralImages_DecisonTree_GenericModel.png"
+             alt="Decision Tree model">
 
-          <p>
-            A custom multilayer perceptron neural network was manually implemented using forward propagation,
-            backpropagation, ReLU activation functions, and softmax classification.
-          </p>
+        <p class="caption">
+          Generalized Decision Tree classification structure used as the
+          baseline interpretable machine learning model.
+        </p>
 
-          <img src="./static/images/GeneralImages_NN_MLP_GenericModel.png"
-            alt="MLP model">
-        </div>
+      </div>
 
-        <div class="card">
-          <h3>CNN Model</h3>
+      <!-- RANDOM FOREST -->
+      <div class="card">
 
-          <p>
-            The convolutional neural network used multiple convolutional blocks, pooling layers, batch normalization,
-            and softmax classification for fibrosis stage prediction from ultrasound images.
-          </p>
+        <h3>Random Forest</h3>
 
-          <img src="./static/images/GeneralImages_CNN_GenericModel.png"
-            alt="CNN model">
-        </div>
+        <h4>Built-In MATLAB Implementation</h4>
+
+        <p>
+          The Random Forest model was implemented using MATLAB’s built-in
+          <code>fitcensemble</code> function with bootstrap aggregation
+          (bagging). Multiple decision trees were trained using randomized
+          subsets of both the training data and feature space in order to
+          improve generalization performance and reduce correlation between trees.
+        </p>
+
+        <p>
+          Predictions from individual trees were combined using majority
+          voting to produce the final classification output, while feature
+          importance analysis was used to identify the most influential
+          clinical variables associated with liver cirrhosis staging.
+        </p>
+
+        <h4>From-Scratch Implementation</h4>
+
+        <p>
+          A second Random Forest implementation was developed from scratch
+          in order to better understand the internal mechanics of ensemble
+          learning algorithms. The custom implementation utilized bootstrap
+          sampling, recursive decision tree construction, randomized feature
+          selection, and majority voting aggregation across independently
+          trained trees.
+        </p>
+
+        <p>
+          Although computationally slower than MATLAB’s built-in implementation,
+          the from-scratch model provided greater insight into how Random Forest
+          classifiers operate internally and how ensemble learning improves
+          classification performance.
+        </p>
+
+        <img src="./static/images/GeneralImages_RandomForest_GenericModel.png"
+             alt="Random Forest model">
+
+        <p class="caption">
+          Generalized Random Forest ensemble architecture utilizing
+          multiple independently trained Decision Trees.
+        </p>
+
+      </div>
+
+      <!-- MLP -->
+      <div class="card">
+
+        <h3>MLP Neural Network</h3>
+
+        <p>
+          A custom multilayer perceptron (MLP) neural network was manually
+          implemented in MATLAB for multiclass liver cirrhosis stage
+          classification. Rather than relying on MATLAB’s built-in neural
+          network training tools, the network was developed manually in
+          order to provide direct control over network architecture,
+          forward propagation, and backpropagation implementation.
+        </p>
+
+        <p>
+          The final network architecture consisted of an input layer,
+          two hidden layers containing 64 and 32 neurons respectively,
+          and an output layer containing three neurons corresponding
+          to cirrhosis stages 1–3. ReLU activation functions were applied
+          to the hidden layers, while the output layer utilized softmax
+          activation for multiclass probability prediction.
+        </p>
+
+        <p>
+          The network was trained using gradient descent optimization
+          with cross-entropy loss. During training, forward propagation
+          was used to compute class probabilities, while backpropagation
+          was manually implemented using the chain rule to calculate
+          gradients and iteratively update network parameters.
+        </p>
+
+        <img src="./static/images/GeneralImages_NN_MLP_GenericModel.png"
+             alt="MLP model">
+
+        <p class="caption">
+          Generalized Multilayer Perceptron neural network architecture
+          used for nonlinear multiclass liver cirrhosis classification.
+        </p>
+
+      </div>
+
+      <!-- CNN -->
+      <div class="card">
+
+        <h3>CNN Model</h3>
+
+        <p>
+          Convolutional Neural Networks (CNNs) were explored for direct
+          ultrasound image-based liver fibrosis classification. CNNs are
+          capable of automatically extracting hierarchical spatial features
+          from medical imaging data using convolutional filters and pooling
+          operations.
+        </p>
+
+        <p>
+          The CNN imaging pipeline, dataset preparation procedures,
+          architecture refinement process, and training results are
+          discussed separately in later sections of the project due to
+          the increased complexity of the image-based workflow.
+        </p>
+
+        <img src="./static/images/GeneralImages_CNN_GenericModel.png"
+             alt="CNN model">
+
+        <p class="caption">
+          Generalized convolutional neural network architecture used for
+          medical image classification workflows.
+        </p>
 
       </div>
 
     </div>
-  </section>
 
+  </div>
+</section>
+
+
+
+
+  
   <!-- RESULTS -->
   <section class="light-section" id="results">
     <div class="container">
