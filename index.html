@@ -326,48 +326,65 @@ p {
 </header>
 
 
-   <!-- SUMMARY -->
-  <section class="light-section" id="summary">
-    <div class="container">
+  <!-- SUMMARY -->
+<section class="light-section" id="summary">
+  <div class="container">
 
-      <h2>Abstract and Project Summary</h2>
+    <h2>Abstract and Project Summary</h2>
 
-      <p class="lead">
-        Liver cirrhosis is a serious and progressive disease that significantly affects liver function and overall patient health.
-        Accurate staging is important for treatment planning, prognosis evaluation, and long-term patient monitoring.
-        However, liver disease classification is challenging because many clinical indicators overlap between stages.
-      </p>
+    <p class="lead">
+      Liver cirrhosis is a serious and progressive disease that significantly
+      impacts liver function and overall patient health. Accurate disease
+      staging is important for treatment planning, prognosis evaluation,
+      and long-term patient monitoring. However, liver disease staging
+      remains challenging because many clinical indicators overlap
+      between progression stages.
+    </p>
 
-      <p>
-        In this project, multiple machine learning approaches were explored for multiclass liver disease staging using both
-        structured clinical datasets and medical imaging datasets. Decision Trees, Random Forests, Multilayer Perceptrons (MLPs),
-        and Convolutional Neural Networks (CNNs) were implemented and evaluated in MATLAB. The project compared classification
-        performance, interpretability, feature importance, and the ability of different models to capture nonlinear relationships
-        within clinical and image-based data.
-      </p>
+    <p>
+      This project explored multiple machine learning approaches for
+      multiclass liver disease staging using both structured clinical
+      datasets and ultrasound imaging data. Decision Trees, Random
+      Forests, Multilayer Perceptrons (MLPs), and Convolutional Neural
+      Networks (CNNs) were implemented and evaluated in MATLAB.
+      The project compared model accuracy, interpretability, feature
+      importance, and the ability of different architectures to capture
+      nonlinear relationships within clinical and image-based datasets.
+    </p>
 
-      <div class="grid-3">
+    <div class="grid-3">
 
-        <div class="card">
-          <div class="stat">88.77%</div>
-          <p>Highest Random Forest test accuracy achieved using structured clinical data.</p>
-        </div>
+      <div class="card">
+        <div class="stat">88.77%</div>
 
-        <div class="card">
-          <div class="stat">87.76%</div>
-          <p>Testing accuracy achieved by the custom MLP neural network.</p>
-        </div>
+        <p>
+          Highest Random Forest testing accuracy achieved using
+          structured clinical data.
+        </p>
+      </div>
 
-        <div class="card">
-          <div class="stat">~80%</div>
-          <p>CNN testing accuracy for liver fibrosis ultrasound image classification.</p>
-        </div>
+      <div class="card">
+        <div class="stat">87.76%</div>
 
+        <p>
+          Testing accuracy achieved by the custom MLP neural
+          network implementation.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="stat">~80%</div>
+
+        <p>
+          CNN testing accuracy achieved for ultrasound-based
+          liver fibrosis classification.
+        </p>
       </div>
 
     </div>
-  </section>
-  
+
+  </div>
+</section>
 
 <!-- INTRODUCTION -->
 <section class="light-section">
