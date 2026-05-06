@@ -159,17 +159,6 @@
   border-radius: 14px;
   border: 1px solid #e5e7eb;
 }
-
-.intro-image {
-  width: 100%;
-  max-height: 700px;
-  object-fit: contain;
-  border-radius: 14px;
-  border: 1px solid #e5e7eb;
-  background: white;
-}
-    
-
     
 @media (max-width: 900px) {
   .two-column {
@@ -177,21 +166,41 @@
   }
 }
 
+.intro-layout {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 2rem;
+  align-items: start;
+}
 
-.image-container {
-  margin: 2rem 0;
+.intro-text p {
+  margin-bottom: 1.25rem;
+}
+
+.intro-figure {
   text-align: center;
 }
 
-.intro-image {
-  display: block;
-  margin: 0 auto;
-  max-width: 700px;
+.intro-figure img {
   width: 100%;
+  max-height: 780px;
+  object-fit: contain;
   border-radius: 14px;
   border: 1px solid #e5e7eb;
   background: white;
 }
+
+.intro-figure .caption {
+  max-width: 650px;
+  margin: 1rem auto 0;
+}
+
+@media (max-width: 900px) {
+  .intro-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
     
     .grid-2 {
       display: grid;
@@ -419,61 +428,74 @@ p {
 
     <div class="card">
 
-      <p>
-        Liver cirrhosis is a chronic and progressive disease in which
-        healthy liver tissue is replaced by scar tissue, leading to
-        impaired liver function and potentially severe complications.
-        Accurate staging is important for treatment planning, disease
-        monitoring, and long-term patient care. However, distinguishing
-        between disease stages can be difficult because many clinical
-        indicators overlap throughout disease progression.
-      </p>
+      <div class="intro-layout">
 
-      <p>
-        Traditional diagnosis often depends on combinations of laboratory
-        testing, medical imaging interpretation, and physician judgment.
-        As a result, liver disease assessment can be time-consuming and
-        may vary depending on the available clinical information and the
-        physician’s experience.
-      </p>
+        <div class="intro-text">
 
-      <p>
-        This project explores the use of machine learning techniques for
-        liver cirrhosis stage classification using both structured clinical
-        datasets and ultrasound imaging data. Decision Trees, Random
-        Forests, Multilayer Perceptron (MLP) neural networks, and
-        preliminary Convolutional Neural Network (CNN) models were
-        investigated to compare model accuracy, interpretability, and
-        image-based classification potential.
-      </p>
+          <p>
+            Liver cirrhosis is a chronic and progressive disease in which
+            healthy liver tissue is replaced by scar tissue, leading to
+            impaired liver function and potentially severe complications.
+            Accurate staging is important for treatment planning, disease
+            monitoring, and long-term patient care. However, distinguishing
+            between disease stages can be difficult because many clinical
+            indicators overlap throughout disease progression.
+          </p>
 
-      <div class="image-container">
-        <img
-          class="intro-image"
-          src="./static/images/GeneralImages_LiverDisease_Infographic4.jpg"
-          alt="Liver disease infographic">
+          <p>
+            Traditional diagnosis often depends on combinations of laboratory
+            testing, medical imaging interpretation, and physician judgment.
+            As a result, liver disease assessment can be time-consuming and
+            may vary depending on the available clinical information and the
+            physician’s experience.
+          </p>
 
-        <p class="caption">
-          Infographic summarizing the progression, clinical impact,
-          and global burden of liver disease and cirrhosis.
-        </p>
+          <p>
+            This project explores the use of machine learning techniques for
+            liver cirrhosis stage classification using both structured clinical
+            datasets and ultrasound imaging data. Decision Trees, Random
+            Forests, Multilayer Perceptron (MLP) neural networks, and
+            preliminary Convolutional Neural Network (CNN) models were
+            investigated to compare model accuracy, interpretability, and
+            image-based classification potential.
+          </p>
+
+          <p>
+            Machine learning provides an opportunity to analyze multiple
+            clinical variables simultaneously and identify complex nonlinear
+            relationships within patient data that may not be obvious through
+            traditional analysis methods. The goal of this work was to
+            evaluate how effectively different machine learning models could
+            predict liver cirrhosis stage while exploring how structured
+            clinical records and imaging-based workflows may support more
+            integrated liver disease assessment systems.
+          </p>
+
+        </div>
+
+        <div class="intro-figure">
+
+          <img
+            src="./static/images/GeneralImages_LiverDisease_Infographic4.jpg"
+            alt="Liver disease infographic">
+
+          <p class="caption">
+            Infographic summarizing the progression, clinical impact,
+            and global burden of liver disease and cirrhosis.
+          </p>
+
+        </div>
+
       </div>
-
-      <p>
-        Machine learning provides an opportunity to analyze multiple
-        clinical variables simultaneously and identify complex nonlinear
-        relationships within patient data that may not be obvious through
-        traditional analysis methods. The goal of this work was to
-        evaluate how effectively different machine learning models could
-        predict liver cirrhosis stage while exploring how structured
-        clinical records and imaging-based workflows may support more
-        integrated liver disease assessment systems.
-      </p>
 
     </div>
 
   </div>
 </section>
+
+</div>
+
+  
 <!-- VIDEO -->
 <section class="white-section">
   <div class="container">
