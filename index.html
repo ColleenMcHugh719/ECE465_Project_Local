@@ -1271,53 +1271,50 @@
   </div>
 </section>
 
-  <!-- CNN -->
-  <section class="white-section">
-    <div class="container">
 
-      <h2>CNN Image Classification Results</h2>
+<!-- CNN Results -->
+<section class="light-section">
+  <div class="container">
 
-      <p>
-        The convolutional neural network classified liver fibrosis ultrasound images into stages f0–f4.
-        Additional training data and architecture refinement improved CNN accuracy from early 70–75% results
-        to approximately 80% testing accuracy.
-      </p>
+    <h2>CNN Results</h2>
 
-      <div class="grid-2">
+    <p>
+      The convolutional neural network (CNN) achieved a highest validation accuracy of approximately 82% and a testing accuracy near 80% when classifying liver fibrosis stages <code>f0–f4</code>. Although the CNN did not outperform the strongest tabular machine learning models explored earlier in the project, the results demonstrated that meaningful fibrosis-related imaging patterns could still be identified directly from ultrasound data.
+    </p>
 
-        <div class="card">
-          <h3>CNN Validation Confusion Matrix</h3>
+    <div class="grid-2">
 
-          <img src="./static/images/CNN_ConfusionMatrix_validationSet.png"
-            alt="CNN validation matrix">
-        </div>
+      <div class="card">
+        <h3>CNN Confusion Matrix</h3>
 
-        <div class="card">
-          <h3>CNN Testing Confusion Matrix</h3>
+        <img src="./static/images/CNN_ConfusionMatrix_testingSet.png"
+          alt="CNN confusion matrix">
+      </div>
 
-          <img src="./static/images/CNN_ConfusionMatrix_testingSet.png"
-            alt="CNN testing matrix">
-        </div>
+      <div class="card">
+        <h3>CNN Training Performance</h3>
 
-        <div class="card">
-          <h3>CNN Training Progress</h3>
-
-          <img src="./static/images/CNN_Training_400Images_ValidationPatience.png"
-            alt="CNN training progress">
-        </div>
-
-        <div class="card">
-          <h3>CNN Prediction Example</h3>
-
-          <img src="./static/images/CNN_TestedImage_f4Prediction.png"
-            alt="CNN prediction example">
-        </div>
-
+        <img src="./static/images/CNN_Training_400Images_ValidationPatience.png"
+          alt="CNN training validation performance graph">
       </div>
 
     </div>
-  </section>
 
+    <p>
+      Earlier CNN configurations achieved testing and validation accuracies closer to 70–75%. As the architecture and training configuration were refined, increasing the number of training images improved overall classification performance by exposing the network to a broader range of fibrosis-related imaging features. Initial development iterations used smaller image subsets in order to reduce processing time while evaluating architectural changes and training parameters before expanding to larger balanced datasets.
+    </p>
+
+    <p>
+      Training performance was also influenced by hyperparameters such as learning rate, batch size, validation frequency, and maximum training epochs. Validation monitoring and early stopping techniques were implemented to terminate training once validation performance stopped improving, reducing unnecessary computation and helping preserve the best-performing validation network.
+    </p>
+
+    <p>
+      The confusion matrix showed that most classifications were concentrated along the diagonal, indicating generally successful prediction across the fibrosis categories. However, misclassifications still occurred between neighboring fibrosis stages, suggesting that additional improvements in feature extraction and dataset diversity may further improve CNN classification performance in future work.
+    </p>
+
+  </div>
+</section>
+      
   <!-- FILES -->
   <section class="light-section" id="files">
     <div class="container">
