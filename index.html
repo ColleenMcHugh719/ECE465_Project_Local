@@ -970,17 +970,18 @@
 
       </div>
 
-       <!-- CNN MODEL -->
+      <!-- CNN MODEL -->
 <div class="card">
 
   <h3>CNN Model</h3>
 
   <p>
-    Convolutional Neural Networks (CNNs) were explored for direct
-    ultrasound image-based liver fibrosis classification. Unlike
-    the tabular machine learning approaches used earlier in the
-    project, CNNs operate directly on imaging data and are capable
-    of automatically extracting hierarchical spatial features using
+    Convolutional Neural Networks (CNNs) were explored for
+    direct ultrasound image-based liver fibrosis
+    classification. Unlike the tabular machine learning
+    approaches used earlier in the project, CNNs operate
+    directly on imaging data and are capable of automatically
+    extracting hierarchical spatial features using
     convolutional filters and pooling operations.
   </p>
 
@@ -988,39 +989,44 @@
     The CNN architecture was developed in MATLAB and accepted
     grayscale ultrasound images with dimensions of
     480 × 640 × 1. The network consisted of four convolutional
-    blocks utilizing convolutional layers, batch normalization,
-    ReLU activation functions, and max pooling operations for
-    progressive feature extraction.
+    blocks utilizing convolutional layers, batch
+    normalization, ReLU activation functions, and max pooling
+    operations for progressive feature extraction.
   </p>
 
   <p>
-    The number of learned filters increased throughout the network
-    from 8 to 16, 32, and 64 filters in order to capture increasingly
-    complex imaging features associated with liver fibrosis progression.
+    The number of learned filters increased throughout the
+    network from 8 to 16, 32, and 64 filters in order to
+    capture increasingly complex imaging features associated
+    with liver fibrosis progression.
   </p>
 
   <p>
-    The final classification stage utilized a fully connected layer,
-    softmax layer, and classification layer to assign ultrasound
-    images into one of five fibrosis categories, f0 through f4.
+    The final classification stage utilized a fully connected
+    layer, softmax layer, and classification layer to assign
+    ultrasound images into one of five fibrosis categories,
+    f0 through f4.
   </p>
 
   <p>
-    The network was trained using the Adam optimizer with a learning
-    rate of 0.001, a mini-batch size of 32, and a maximum of
-    20 training epochs. Validation monitoring and early stopping
-    criteria were also implemented during training to reduce
-    overfitting and preserve the best-performing validation network.
+    The network was trained using the Adam optimizer with a
+    learning rate of 0.001, a mini-batch size of 32, and a
+    maximum of 20 training epochs. Validation monitoring and
+    early stopping criteria were also implemented during
+    training to reduce overfitting and preserve the
+    best-performing validation network.
   </p>
 
-      <img src="./static/images/CNN_System_Architecture.png"
-        alt="CNN architecture diagram">
+  <img src="./static/images/GeneralImages_CNN_GenericModel.png"
+       alt="CNN model">
 
-      <p class="caption">
-        Generalized convolutional neural network architecture used for ultrasound image classification and liver fibrosis stage prediction.
-      </p>
-    </div>
+  <p class="caption">
+    Generalized convolutional neural network architecture
+    used for ultrasound image classification and liver
+    fibrosis stage prediction.
+  </p>
 
+</div>
 </div>
 
     </div>
